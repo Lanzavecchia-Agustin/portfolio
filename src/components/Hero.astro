@@ -1,0 +1,77 @@
+---
+const personalImageAlt = "Miguel Ángel";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+---
+
+<style>
+  .neon {
+    animation: fade-out 1s infinite alternate;
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px rgb(103, 167, 167),
+      0 0 40px rgb(110, 124, 124),
+      0 0 45px rgb(74, 94, 94),
+      0 0 50px rgb(89, 116, 116),
+      0 0 100px rgb(69, 85, 85);
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1; /* Texto totalmente visible al inicio de la animación */
+    }
+    100% {
+      opacity: 0.8; /* Texto parcialmente visible al final de la animación */
+    }
+  }
+</style>
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-24"
+      src="src/public/images/profileImage.jpeg"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://linkedin.com/in/midudev"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <div class="flex flex-col">
+        <h2 class="neon text-xl mb-1">Frontend developer</h2>
+
+        <Badge>Open to work</Badge>
+      </div>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, I'm Agustin
+  </h1>
+
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    a<strong> web and mobile developer</strong> from Argentina with over 2 years
+    of experience. Specialized in crafting unique web and mobile applications.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:lanzavecchia.job@gmail.com">
+      <MailIcon class="size-4" />
+      Contact me
+    </SocialPill>
+    <SocialPill
+      href="https://www.linkedin.com/in/agustin-lanzavecchia-3755571a8/"
+    >
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </nav>
+</div>

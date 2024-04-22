@@ -1,0 +1,62 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Currently...",
+    title: "Freelance developer",
+    company: "Freelance",
+    description:
+      "While seeking new challenges, I'm learning more every day, taking courses, working on projects to improve, and much more!",
+    technologies: [
+      "React",
+      "Next",
+      "React native",
+      "Redux",
+      "ReduxToolkit",
+      "Tailwind",
+    ],
+  },
+  {
+    date: "Aphil 2024",
+    title: "React native developer",
+    company: "Imajine LLC",
+    technologies: ["React native", "Redux", "ReduxToolkit", "CSS"],
+    description:
+      "In charge of enhancing code, solving logical and visual errors, providing a better user experience, and implementing various libraries to carry out diverse tasks.",
+  },
+  {
+    date: "November 2022",
+    title: "React Developer",
+    company: "Imajine LLC",
+    technologies: ["React", "Redux", "ReduxToolkit", "Bootstrap", "SCSS"],
+    description:
+      "Implementation of new technologies for web development, clear and effective creation of reusable components, implementation of libraries for authentication and payment management.",
+  },
+  {
+    date: "February 2022",
+    title: "Software developer",
+    company: "Toptive",
+    technologies: ["HTML", "CSS", "JAVASCRIPT"],
+    description:
+      "Responsible for improving SEO for various webs from companies that outsourced this consultancy with the aim of enhancing their users' experience and their positioning on the internet.",
+  },
+  {
+    date: "Marzo 2021",
+    title: "Freelance developer",
+    company: "Programing 101",
+    technologies: ["React native", "CSS"],
+    description:
+      "Leader of a small group of developers venturing into the world of freelance development for the first time!",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
